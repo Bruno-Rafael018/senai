@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class BrindeNatal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nome: ");
+        String nome = scanner.nextLine();
+        System.out.print("Idade: ");
+        int idade = scanner.nextInt();
+        scanner.nextLine(); // Limpar buffer
+        System.out.print("Estado Civil (Casada, Solteira, Viúva): ");
+        String estadoCivil = scanner.nextLine();
+        System.out.print("Quantidade de filhos: ");
+        int filhos = scanner.nextInt();
+
+        // Lógica: Direito se for Viúva OU tiver filhos > 0
+        if (estadoCivil.equalsIgnoreCase("Viúva") || filhos > 0) {
+            System.out.println("Parabéns! Você terá direito ao brinde de Natal");
+        } else {
+            System.out.println("Infelizmente, você não terá direito ao brinde de Natal...");
+        }
+    }
+}
