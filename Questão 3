@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ClassificaGrupos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("--- Classificação de Grupos ---");
+        System.out.print("Sexo (1 para Mulher, 2 para Homem): ");
+        int sexo = scanner.nextInt();
+        System.out.print("Possui CTPS assinada? (1=S ou 2=N): ");
+        int ctps = scanner.nextInt();
+        System.out.print("Possui filhos? (1=S ou 2=N): ");
+        int filhos = scanner.nextInt();
+
+        // Variáveis booleanas para facilitar a lógica de conjuntos
+        boolean eMulher = (sexo == 1);
+        boolean temCTPS = (ctps == 1);
+        boolean temFilhos = (filhos == 1);
+
+        System.out.print("Você pertence ao Grupo: ");
+
+        if (eMulher && temCTPS && temFilhos) {
+            System.out.println("J");
+        } else if (eMulher && temCTPS && !temFilhos) {
+            System.out.println("H");
+        } else if (eMulher && !temCTPS && temFilhos) {
+            System.out.println("G");
+        } else if (eMulher && !temCTPS && !temFilhos) {
+            System.out.println("D");
+        } else if (!eMulher && temCTPS && temFilhos) {
+            System.out.println("I");
+        } else if (!eMulher && temCTPS && !temFilhos) {
+            System.out.println("E");
+        } else if (!eMulher && !temCTPS && temFilhos) {
+            System.out.println("F");
+        } else {
+            System.out.println("Nenhum dos grupos específicos (A, B ou C isolados)");
+        }
+    }
+}
