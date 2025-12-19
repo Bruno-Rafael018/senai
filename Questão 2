@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class MenorComFilhos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Idade: ");
+        int idade = scanner.nextInt();
+        System.out.print("Quantidade de filhos: ");
+        int filhos = scanner.nextInt();
+
+        if (idade < 18 && filhos > 0) {
+            System.out.println("menor de idade com filhos");
+        }
+    }
+}
