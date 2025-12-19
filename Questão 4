@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class SequenciasNumericas {
+    public static void main(String[] args) {
+        // a) Pares de 1 a 33
+        System.out.print("Pares: ");
+        for (int i = 1; i <= 33; i++) {
+            if (i % 2 == 0) System.out.print(i + " ");
+        }
+
+        // b) Ímpares de 1 a 33
+        System.out.print("\nÍmpares: ");
+        for (int i = 1; i <= 33; i++) {
+            if (i % 2 != 0) System.out.print(i + " ");
+        }
+        // d e e) Maior e Menor
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\nDigite 3 números:");
+        int n1 = sc.nextInt(), n2 = sc.nextInt(), n3 = sc.nextInt();
+        
+        int maior = Math.max(n1, Math.max(n2, n3));
+        int menor = Math.min(n1, Math.min(n2, n3));
+        
+        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
+    }
+}
